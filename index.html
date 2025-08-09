@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinh nhật tuổi 18</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Snhat.css" />
+    <script src="Snhat.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <div class="password-screen" id="passwordScreen">
+      <div class="password-content">
+        <div class="password-image">
+          <img src="images/4.png" alt="Password Image" />
+        </div>
+        <h2>Nhập Mật Khẩu Để Mở Quà</h2>
+        <div class="password-input-container">
+          <input
+            type="password"
+            class="password-input"
+            id="passwordInput"
+            placeholder="Nhập mật khẩu..."
+          />
+          <i class="fas fa-eye password-toggle" id="passwordToggle"> </i>
+        </div>
+        <button class="submit-btn" id="submitBtn">Mở Quà</button>
+      </div>
+    </div>
+
+    <div class="envelope-container" id="envelopeContainer">
+      <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-content">
+          <i class="fas fa-envelope-open-text"></i>
+          <div class="line-with-heart">
+            <span class="line"></span><i class="fas fa-heart"></i
+            ><span class="line"></span>
+          </div>
+          <p>Chạm để mở quà sinh nhật!</p>
+        </div>
+        <div class="envelope-shadow"></div>
+        <div class="envelope-message">Dành cho em yêu ❤️</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="main-content" id="mainContent">
+        <header>
+          <h1>
+            Chúc Mừng Sinh Nhật Tuổi 18! <i class="fas fa-heart heart"></i>
+          </h1>
+          <p>
+            Một ngày thật đặc biệt dành cho người con gái đặc biệt nhất thế
+            gian!
+          </p>
+        </header>
+        <nav class="nav-menu">
+          <div class="nav-item active" data-section="quiz">
+            <i class="fas fa-question-circle"></i> Câu Đố
+          </div>
+          <div class="nav-item" data-section="game">
+            <i class="fas fa-gift"></i> Game
+          </div>
+          <div class="nav-item" data-section="cake">
+            <i class="fas fa-images"></i> Thổi Nến
+          </div>
+          <div class="nav-item" data-section="gift">
+            <i class="fas fa-birthday-cake"></i> Lời chúc
+          </div>
+          <div class="nav-item" data-section="gallery">
+            <i class="fas fa-puzzle-piece"></i> Hình ảnh của em
+          </div>
+          <div class="nav-item" data-section="wish">
+            <i class="fas fa-star"></i> Điều Ước
+          </div>
+        </nav>
+
+        <section id="quiz" class="content-section" style="display: block">
+          <h2 class="section-title">
+            <i class="fas fa-question-circle"></i> Câu Đố Dành Cho Em
+          </h2>
+          <div class="quiz-container">
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="quiz-result" id="quizResult"></div>
+            <button class="next-btn" id="nextBtn" style="display: none">
+              Câu Tiếp Theo
+            </button>
+          </div>
+        </section>
+
+        <section id="gift" class="content-section">
+          <h2 class="section-title"><i class="fas fa-gift"></i> Mở Quà Nào!</h2>
+          <div class="gift-container">
+            <div class="gift-box" id="giftBox">
+              <div class="gift-body"></div>
+              <div class="gift-lid"></div>
+              <div class="gift-bow"></div>
+            </div>
+            <div class="gift-message" id="giftMessage">
+              <div class="typed-text" id="typedText"></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+          <div class="loading-container" id="loadingContainer">
+            <div class="progress-bar-container">
+              <i class="fas fa-heart start-heart"></i>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <div class="progress-indicator" id="progressIndicator">
+                  <div class="progress-thumb">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <span class="progress-percentage" id="progressPercentage"
+                    >0%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p>LOADING LOVE...</p>
+          </div>
+          <div class="fullscreen-memories" id="fullscreenMemories"></div>
+          <button class="close-gallery-btn" id="closeGalleryBtn">
+            &times;
+          </button>
+        </section>
+
+        <section id="cake" class="content-section">
+          <h2 class="section-title">
+            <i class="fas fa-birthday-cake"></i> Thổi Nến Đi Nào!
+          </h2>
+          <div class="cake-container">
+            <div class="cake">
+              <div class="candles">
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+                <div class="candle"><div class="flame"></div></div>
+              </div>
+              <div class="layer top-layer">
+                <div class="frosting-top"></div>
+              </div>
+              <div class="layer middle-layer">
+                <div class="sprinkles"></div>
+              </div>
+              <div class="layer bottom-layer">
+                <div class="frosting-bottom"></div>
+                <div class="sprinkles"></div>
+              </div>
+            </div>
+            <button class="blow-btn" id="blowBtn">Thổi Nến</button>
+            <div class="wish-text" id="wishText">
+              Chúc mừng sinh nhật em yêu nháaa.... Chúc em tuổi mới ngập tràn hạnh phúc - thành công và ngày càng xinh đẹp. Luôn luôn ở bên anh. Em nhée ^^!❤️
+            </div>
+          </div>
+        </section>
+
+        <section id="game" class="content-section">
+          <h2 class="section-title">
+            <i class="fas fa-puzzle-piece"></i> Game Đoán Số
+          </h2>
+          <div class="number-game-container">
+            <div class="game-info">
+              <p>Anh đang nghĩ đến một số từ 1 đến 100. Em đoán được không?</p>
+            </div>
+            <div class="guess-input-container">
+              <input
+                type="number"
+                class="guess-input"
+                id="guessInput"
+                min="1"
+                max="100"
+                placeholder="Số..."
+              />
+              <button class="guess-btn" id="guessBtn">Đoán</button>
+            </div>
+            <div class="game-feedback" id="gameFeedback">
+              Hãy nhập số và đoán lần đầu tiên!
+            </div>
+            <div class="game-stats">
+              <div class="stat-box">
+                <p>Số lần đoán: <span id="guessCount">0</span></p>
+              </div>
+              <div class="stat-box">
+                <p>Số lần còn lại: <span id="remainingGuesses">10</span></p>
+              </div>
+            </div>
+            <button class="reset-btn" id="resetBtn">Chơi lại</button>
+          </div>
+        </section>
+
+        <section id="wish" class="content-section">
+          <h2 class="section-title">
+            <i class="fas fa-star"></i> Điều Ước Tuổi 18
+          </h2>
+          <div class="wish-section">
+            <div class="wish-card">
+              <h3>
+                <i class="fas fa-wand-magic-sparkle"></i> Viết điều ước của em
+                vào đây
+              </h3>
+              <p>Mọi điều ước của em sẽ thành hiện thực!</p>
+              <div class="wish-textarea-container">
+                <i class="fas fa-heart wish-icon"></i>
+                <textarea
+                  class="wish-textarea"
+                  id="wishTextArea"
+                  placeholder="Viết điều ước của bạn ở đây..."
+                ></textarea>
+              </div>
+              <button class="send-wish-btn" id="sendWishBtn">
+                Gửi Điều Ước
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="letter-container" id="letterContainer">
+      <div class="close-letter" id="closeLetter">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="letter-content" id="letterContent"></div>
+    </div>
+    <div class="starry-sky" id="starrySky"></div>
+
+    <div class="final-message" id="finalMessage">Happy Birthday Tuổi 18!</div>
+
+    <div class="confirmation-message" id="confirmationMessage">
+      Điều ước của e đã được gửi đi! ✨
+    </div>
+
+    <div class="confirmation-message" id="wishConfirmationDialog">
+        <h4>Xác nhận lại điều ước của em nhé?</h4>
+        <p id="wishPreviewText"></p>
+        <div class="wish-dialog-buttons">
+            <button class="submit-btn" id="confirmSendWishBtn">Đúng rồi, gửi đi! <i class="fas fa-paper-plane"></i></button>
+            <button class="reset-btn" id="goBackToEditWishBtn" style="background: #a9a9a9;">Quay lại </button>
+        </div>
+    </div>
+
+
+    <div class="music-player" id="musicPlayer">
+      <button class="music-btn" id="playBtn">
+        <i class="fas fa-play"></i>
+      </button>
+      <div class="music-info" id="musicInfo">Sinh Nhật Vui Vẻ - Piano</div>
+      <div class="volume-control">
+        <i class="fas fa-volume-up"></i>
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.1"
+          value="0.7"
+          class="volume-slider"
+          id="volumeSlider"
+        />
+      </div>
+      <audio id="backgroundMusic" loop>
+        <source src="Music/ngaydautien.mp3" type="audio/mpeg" />
+      </audio>
+      <audio id="blowSound">
+        <source
+          src="https://assets.mixkit.co/sfx/preview/mixkit-blow-out-candle-3160.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+  </body>
+</html>
